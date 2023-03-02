@@ -1,14 +1,16 @@
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
+import MusicVideos from "./components/MusicVideos";
 
 const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1 className="text-3xl font-bold underline text-red-600">
-          Simple React Typescript Tailwind Sample
-        </h1>
-      </header>
-    </div>
+    <>
+      <ToastContainer autoClose={5000} theme="colored" newestOnTop={true} />
+      <main className="container py-4 px-2 mx-auto">
+        <MusicVideos />
+      </main>
+    </>
   );
 };
 

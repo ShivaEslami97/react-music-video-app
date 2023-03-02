@@ -1,3 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Outfit", sans-serif;
+  }
+  body {
+    @apply bg-body;
+  }
+}
+@layer components {
+  .card {
+    @apply space-y-2;
+  }
+  .card__img {
+    @apply w-72 object-cover rounded-md shadow-md;
+  }
+  .card__caption-artist {
+    @apply text-white text-lg text-ellipsis overflow-hidden whitespace-nowrap;
+  }
+  .card__caption-title {
+    @apply text-gray-400 text-base;
+  }
+}
