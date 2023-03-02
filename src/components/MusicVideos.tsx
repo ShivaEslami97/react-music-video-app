@@ -10,9 +10,16 @@ const MusicVideos = () => {
 
   return (
     <section className="grid grid-cols-card gap-5">
-      {data?.slice(0, 100).map((data) => {
-        return <MovieCard items={data} />;
-      })}
+      {loading && <Loading />}
+      {!loading && error && (
+        <p className="text-white text-lg">No data found, Try again!</p>
+      )}
+      {!loading &&
+        !error &&
+        data &&
+        data?.slice(0, 100).map((data) => {
+          return <MovieCard items={data} />;
+        })}
     </section>
   );
 };
