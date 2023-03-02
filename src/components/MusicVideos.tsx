@@ -1,6 +1,6 @@
 import { useMusicVideos } from "../hooks/useMusicVideos";
 import Loading from "./Loading/Loading";
-import MovieCard from "./MovieCard";
+import VideoCard from "./VideoCard";
 
 const url =
   "https://raw.githubusercontent.com/XiteTV/frontend-coding-exercise/main/data/dataset.json";
@@ -17,8 +17,15 @@ const MusicVideos = () => {
       {!loading &&
         !error &&
         data &&
-        data?.slice(0, 100).map((data) => {
-          return <MovieCard items={data} />;
+        data?.slice(0, 100).map((video) => {
+          return (
+            <VideoCard
+              key={video.id}
+              title={video.title}
+              artist={video.artist}
+              imageUrl={video.image_url}
+            />
+          );
         })}
     </section>
   );
