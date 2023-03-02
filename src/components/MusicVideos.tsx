@@ -8,7 +8,13 @@ const url =
 const MusicVideos = () => {
   const { data, error, loading } = useMusicVideos(url);
 
-  return <section className="grid grid-cols-card gap-5"></section>;
+  return (
+    <section className="grid grid-cols-card gap-5">
+      {data?.slice(0, 100).map((data) => {
+        return <MovieCard items={data} />;
+      })}
+    </section>
+  );
 };
 
 export default MusicVideos;
