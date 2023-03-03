@@ -34,10 +34,10 @@
     @apply text-white text-lg p-3;
   }
   .card {
-    @apply space-y-2;
+    @apply space-y-2 cursor-pointer;
   }
   .card__img {
-    @apply w-72 object-cover rounded-md shadow-md;
+    @apply w-72 object-cover rounded-md shadow-md transition-all duration-700 ease-scale;
   }
   .card__caption-artist {
     @apply text-white text-lg text-ellipsis overflow-hidden whitespace-nowrap;
@@ -57,4 +57,7 @@
   .form__select-option {
     @apply py-2 text-sm;
   }
+}
+.card:hover .card__img {
+  transform: scale3d(1.08, 1.08, 1.08);
 }

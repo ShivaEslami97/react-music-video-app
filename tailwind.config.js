@@ -14,6 +14,9 @@ module.exports = {
         // Complex site-specific column configuration
         card: "repeat(auto-fit, minmax(300px, 1fr))",
       },
+      transitionTimingFunction: {
+        scale: "cubic-bezier(0, 0, 0.2, 1)",
+      },
     },
   },
   plugins: [],
