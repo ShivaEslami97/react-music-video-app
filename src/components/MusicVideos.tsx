@@ -50,7 +50,7 @@ const MusicVideos = () => {
           searchTitle={searchTitle}
         />
       )}
-      <section className="grid grid-cols-card gap-5">
+      <section className="grid grid-cols-card place-items-center gap-5 md:place-items-start">
         {loading && <Loading />}
         {!loading && error && (
           <p className="error">No data found, Try again!</p>
