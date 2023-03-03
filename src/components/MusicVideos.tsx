@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { useMusicVideos } from "../hooks/useMusicVideos";
 import { MusicVideo } from "../models/customTypes";
+import DataNotFound from "./DataNotFound";
 import Loading from "./Loading/Loading";
 import MusicVideoList from "./MusicVideoList";
 import Search from "./Search";
@@ -42,7 +43,7 @@ const MusicVideos = () => {
   let content = <Loading />;
 
   if (!loading && error) {
-    content = <p className="error">No data found, Try again!</p>;
+    content = <DataNotFound>No data found, Try again!</DataNotFound>;
   }
   if (!loading && !error && filteredMusicVideos) {
     content = (

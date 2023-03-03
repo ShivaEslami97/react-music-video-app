@@ -1,5 +1,6 @@
 import React from "react";
 import { MusicVideo } from "../models/customTypes";
+import DataNotFound from "./DataNotFound";
 import VideoCard from "./VideoCard";
 
 interface Props {
@@ -25,7 +26,7 @@ const MusicVideoList: React.FC<Props> = (props) => {
           );
         })}
       {!isloading && !error && videos.length === 0 && (
-        <p className="error">No data found!</p>
+        <DataNotFound>No data found!</DataNotFound>
       )}
     </section>
   );
