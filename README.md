@@ -8,7 +8,7 @@ https://react-music-video-app.netlify.app/
 
 ## App Structure
 
-- **src/hooks/useMusicVideos.ts:** Custom hook for retrieving the list of music videos.
+- **src/hooks/useMusicVideos.ts:** Custom hook using Axios for retrieving the list of music videos.
 - **src/models/customTypes.ts:** Interfaces used in the app.
 - **src/App.tsx:** Main file for rendering the app.
 - **src/components/MusicVideos.tsx:** Component for rendering the list of music videos.
