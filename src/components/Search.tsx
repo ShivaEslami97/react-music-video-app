@@ -24,7 +24,7 @@ const Search: React.FC<Props> = ({
   };
 
   return (
-    <section className="py-4">
+    <section className="mb-7">
       <form className="grid grid-cols-2 gap-4">
         <div className="form__field">
           <label htmlFor="title" className="text-white">
