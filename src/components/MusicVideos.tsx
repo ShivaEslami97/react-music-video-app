@@ -38,22 +38,22 @@ const MusicVideos = () => {
     setFilteredMusicVideos(filterdData);
   }, [data, filteredGenreIds, searchTitle]);
 
+  const dataIsDisplayed = !loading && !error && filteredMusicVideos.length > 0;
+
   return (
     <>
-      <Search
-        genres={genreLabels}
-        onFilterChanged={onFilterChanged}
-        onSearchChanged={onSearchChanged}
-        searchTitle={searchTitle}
-      />
+      {dataIsDisplayed && (
+        <Search
+          genres={genreLabels}
+          onFilterChanged={onFilterChanged}
+          onSearchChanged={onSearchChanged}
+          searchTitle={searchTitle}
+        />
+      )}
       <section className="grid grid-cols-card gap-5">
         {loading && <Loading />}
-        {!loading && error && (
-          <p className="text-white text-lg">No data found, Try again!</p>
-        )}
-        {!loading &&
-          !error &&
-          filteredMusicVideos.length > 0 &&
+        {!loading && error && <p>No data found, Try again!</p>}
+        {dataIsDisplayed &&
           filteredMusicVideos?.slice(0, 100).map((video) => {
             return (
               <VideoCard
