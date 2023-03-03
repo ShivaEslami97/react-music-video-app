@@ -11,6 +11,23 @@
   body {
     @apply bg-body;
   }
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    z-index: 1;
+    outline: none;
+  }
+  select::-ms-expand {
+    display: none;
+  }
 }
 @layer components {
   .card {
@@ -24,5 +41,17 @@
   }
   .card__caption-title {
     @apply text-gray-400 text-base;
+  }
+  .form__field {
+    @apply flex flex-col gap-2;
+  }
+  .form__input {
+    @apply border-none rounded-md p-2 shadow-sm shadow-black focus:outline-none;
+  }
+  .form__select {
+    @apply shadow-sm h-28 rounded-md shadow-black pr-0 p-2;
+  }
+  .form__select-option {
+    @apply py-2 text-sm;
   }
 }

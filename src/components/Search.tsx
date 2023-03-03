@@ -24,22 +24,39 @@ const Search: React.FC<Props> = ({
   };
 
   return (
-    <div className="p-3">
-      <form>
-        <label>
-          Title:
-          <input type="text" value={searchTitle} onChange={handleTitleChange} />
-        </label>
-        <label>
-          Genre:
-          <select multiple={true} onChange={handleGenreChange}>
+    <div className="py-4">
+      <form className="grid grid-cols-2 gap-4">
+        <div className="form__field">
+          <label htmlFor="title" className="text-white">
+            Title:
+          </label>
+          <input
+            className="form__input"
+            type="text"
+            id="title"
+            value={searchTitle}
+            placeholder="Search by title"
+            onChange={handleTitleChange}
+          />
+        </div>
+        <div className="form__field">
+          <label className="text-white">Genre:</label>
+          <select
+            className="form__select"
+            multiple={true}
+            onChange={handleGenreChange}
+          >
             {genres.map((genre) => (
-              <option key={genre.id} value={genre.id}>
+              <option
+                key={genre.id}
+                className="form__select-option"
+                value={genre.id}
+              >
                 {genre.name}
               </option>
             ))}
           </select>
-        </label>
+        </div>
       </form>
     </div>
   );
