@@ -25,7 +25,7 @@ const Search: React.FC<Props> = ({
 
   return (
     <section className="mb-7">
-      <form className="grid grid-cols-2 gap-4">
+      <form className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <div className="form__field">
           <label htmlFor="title" className="text-white">
             Title:
