@@ -13,6 +13,14 @@ https://react-music-video-app.netlify.app/
 - Search by title
 - Responsive Design
 
+## Built With
+
+- React - A JavaScript library for building user interfaces.
+- TypeScript - A strict syntactical superset of JavaScript.
+- Tailwind CSS - A utility-first CSS framework.
+- Axios - A promise-based HTTP Client for node.js and the browser.
+- React-Toastify - A lightweight toast notification library.
+
 ## App Structure
 
 - **src/hooks/useMusicVideos.ts:** Custom hook using Axios for retrieving the list of music videos.
