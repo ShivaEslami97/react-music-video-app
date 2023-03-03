@@ -1,3 +1,23 @@
+# React Typescript Music Video App
+
+This is a simple React Typescript app that retrieves a JSON file via an HTTP request which contains a dataset of music videos. The app has a search field with two parts: one input for entering title and another field for selecting genre.
+
+## Demo
+
+https://react-music-video-app.netlify.app/
+
+## App Structure
+
+- **src/hooks/useMusicVideos.ts:** Custom hook for retrieving the list of music videos.
+- **src/models/customTypes.ts:** Interfaces used in the app.
+- **src/App.tsx:** Main file for rendering the app.
+- **src/components/MusicVideos.tsx:** Component for rendering the list of music videos.
+- **src/components/Search.tsx:** Component for rendering the search form.
+
+## Conclusion
+
+This React Typescript music video app is a simple example of how to retrieve and display data from an external API, and how to implement a search form with filtering.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
