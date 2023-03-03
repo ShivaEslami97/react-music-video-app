@@ -6,6 +6,13 @@ This is a simple React Typescript app that retrieves a JSON file via an HTTP req
 
 https://react-music-video-app.netlify.app/
 
+## Features
+
+- Display list of music videos
+- Filter by genre
+- Search by title
+- Responsive Design
+
 ## App Structure
 
 - **src/hooks/useMusicVideos.ts:** Custom hook using Axios for retrieving the list of music videos.
