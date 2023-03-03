@@ -24,7 +24,7 @@ const Search: React.FC<Props> = ({
   };
 
   return (
-    <div className="py-4">
+    <section className="py-4">
       <form className="grid grid-cols-2 gap-4">
         <div className="form__field">
           <label htmlFor="title" className="text-white">
@@ -58,7 +58,7 @@ const Search: React.FC<Props> = ({
           </select>
         </div>
       </form>
-    </div>
+    </section>
   );
 };
 
