@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import axios, { AxiosResponse } from "axios";
-import { MusicVideo, VideoResponse } from "../models/customTypes";
+import { Genre, MusicVideo, VideoResponse } from "../models/customTypes";
 import { toast } from "react-toastify";
 
 export const useMusicVideos = (url: string) => {
   const [data, setData] = useState<MusicVideo[]>([]);
+  const [genreLabels, setGenreLabels] = useState<Genre[]>([]);
   const [error, setError] = useState<boolean>(false);
   const [loading, setLoading] = useState(true);
 
@@ -29,7 +30,7 @@ export const useMusicVideos = (url: string) => {
         });
 
         setData(videosWithGenre);
-        console.log(videosWithGenre);
+        setGenreLabels(response.data.genres);
       } catch (error) {
         if (error instanceof Error) {
           toast.error("Something went wrong!");
@@ -42,5 +43,5 @@ export const useMusicVideos = (url: string) => {
     fetchData();
   }, [url]);
 
-  return { data, error, loading };
+  return { data, error, loading, genreLabels };
 };
