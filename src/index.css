@@ -30,6 +30,9 @@
   }
 }
 @layer components {
+  .error {
+    @apply text-white text-lg p-3;
+  }
   .card {
     @apply space-y-2;
   }

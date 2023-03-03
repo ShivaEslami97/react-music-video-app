@@ -52,7 +52,9 @@ const MusicVideos = () => {
       )}
       <section className="grid grid-cols-card gap-5">
         {loading && <Loading />}
-        {!loading && error && <p>No data found, Try again!</p>}
+        {!loading && error && (
+          <p className="error">No data found, Try again!</p>
+        )}
         {dataIsDisplayed &&
           filteredMusicVideos?.slice(0, 100).map((video) => {
             return (
@@ -65,7 +67,7 @@ const MusicVideos = () => {
             );
           })}
         {!loading && !error && filteredMusicVideos.length === 0 && (
-          <p>No data found!</p>
+          <p className="error">No data found!</p>
         )}
       </section>
     </>
